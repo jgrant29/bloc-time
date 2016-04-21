@@ -1,11 +1,58 @@
+.tomato {
+  font-size: 10rem;
+  color: #DDDDDD;
+}
+
 .pomodoro {
-  margin-top: 25%;
-  margin-left: 45%;
+  margin-top: 15%;
+  margin-left: 35%;
 }
 
 .timer-button {
-  padding: 10px;
-  background-color: #888;
-  color: #fff;
-  border: 1px solid #888;
+  font-size: 1rem;
+  padding: 15px;
+  background-color: #fff;
+  color: #2ECC40;
+  border: 2px solid #2ECC40;
 }
+
+.break-button {
+  font-size: 1rem;
+  padding: 15px;
+  background-color: #fff;
+  color: #0074D9;
+  border: 2px solid #0074D9;
+}
+
+.reset-button {
+  font-size: 1rem;
+  padding: 15px;
+  background-color: #fff;
+  color: #FFDC00;
+  border: 2px solid #FFDC00;
+}
+
+.stop-button {
+  font-size: 1rem;
+  padding: 15px;
+  background-color: #fff;
+  color: #FF4136;
+  border: 2px solid #FF4136;
+}
+
+.timer-button:hover {
+    background-color: #2ECC40;
+    color: #fff;
+  }
+.break-button:hover {
+    background-color: #0074D9;
+    color: #fff;
+  }
+.reset-button:hover {
+    background-color: #FFDC00;
+    color: #fff;
+  }
+.stop-button:hover {
+    background-color: #FF4136;
+    color: #fff;
+  }

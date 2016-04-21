@@ -1,7 +1,10 @@
 <div class="pomodoro">
-  <h1>{{ landing.timePlayer.pomodoro | timecode }}</h1>
-  <a class="timer-button" ng-show="!stop" ng-click="landing.timePlayer.work()">{{ landing.timerButton }}</a>
-  <a class="timer-button" type="button" ng-show="true" ng-click="landing.timePlayer.stopWork()">Stop</a>
-  <a class="timer-button" type="button" ng-show="true" ng-click="landing.timePlayer.resetWork()">Reset</a>
-  <a class="timer-button" type="button" ng-show="true" ng-click="landing.timePlayer.breakWork()">Break</a>
-</div>
+  <div class="tomato">{{ landing.timePlayer.pomodoro | timecode }}</div>
+  <button type="button" class="timer-button" ng-hide="landing.timePlayer.relax" ng-disabled="landing.timePlayer.buttonClicked" ng-click="landing.timePlayer.work()">{{ landing.timerButton }}</button>
+
+  <button type="button" class="break-button" ng-show="landing.timePlayer.relax" ng-disabled="landing.timePlayer.buttonClicked" ng-click="landing.timePlayer.work()">{{ landing.breakButton }}</button>
+
+  <button type="button" class="reset-button" ng-click="landing.timePlayer.resetWork()">Reset</button>
+
+  <button type="button" class="stop-button" ng-click="landing.timePlayer.stopWork()">Stop</button>
+  
