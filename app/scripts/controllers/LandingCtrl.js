@@ -1,7 +1,7 @@
 (function() {
    function LandingCtrl(TimePlayer) {
-    this.timerButton = "Cut Tomato";
-    this.breakButton = "Eat Tomato"
+    this.timerButton = "Start work";
+    this.breakButton = "Start break"
     this.timePlayer = TimePlayer;
    }
 

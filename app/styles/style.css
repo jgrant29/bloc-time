@@ -41,18 +41,22 @@
 }
 
 .timer-button:hover {
-    background-color: #2ECC40;
-    color: #fff;
-  }
+  cursor: pointer;
+  background-color: #2ECC40;
+  color: #fff;
+}
 .break-button:hover {
-    background-color: #0074D9;
-    color: #fff;
-  }
+  cursor: pointer;
+  background-color: #0074D9;
+  color: #fff;
+}
 .reset-button:hover {
-    background-color: #FFDC00;
-    color: #fff;
-  }
+  cursor: pointer;
+  background-color: #FFDC00;
+  color: #fff;
+}
 .stop-button:hover {
-    background-color: #FF4136;
-    color: #fff;
-  }
+  cursor: pointer;
+  background-color: #FF4136;
+  color: #fff;
+}
