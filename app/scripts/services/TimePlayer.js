@@ -39,7 +39,6 @@
               TimePlayer.buttonClicked = false;
             }
             howManyTimes++
-
           }
         }
       }, 1000);

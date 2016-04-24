@@ -1,10 +1,45 @@
-<div class="pomodoro">
-  <div class="tomato">{{ landing.timePlayer.pomodoro | timecode }}</div>
-  <button type="button" class="timer-button" ng-hide="landing.timePlayer.relax" ng-disabled="landing.timePlayer.buttonClicked" ng-click="landing.timePlayer.work()">{{ landing.timerButton }}</button>
+<div class="container">
+  <div class="todo">
+    <div class="tasks">
+      <div ng-controller="LandingCtrl">
+        <h2>Task History</h2>
+        <p>
+          Sort by:
+          <select ng-model="orderBy">
+            <option>from</option>
+            <option>content</option>
+            <option>timestamp</option>
+          </select>
+        </p>
+        <div class="form">
+          <form class="task-form" ng-submit="addMessage()">
+            <input class="task-form" type="text" ng-model="task">
+            <input class="task-submit"type="submit">
+          </form>
+        </div>
 
-  <button type="button" class="break-button" ng-show="landing.timePlayer.relax" ng-disabled="landing.timePlayer.buttonClicked" ng-click="landing.timePlayer.work()">{{ landing.breakButton }}</button>
+        <ul class="tasks">
+          <!-- arrays are fully sortable and filterable -->
+          <li ng-repeat="task in tasks | orderBy:orderBy | filter:searchText">
+            {{ task.from }}: {{ task.content }}
 
-  <button type="button" class="reset-button" ng-click="landing.timePlayer.resetWork()">Reset</button>
+            <!-- delete a task using $remove -->
+            <a href="" ng-click="tasks.$remove(task)">X</a>
+          </li>
+        </ul>
 
-  <button type="button" class="stop-button" ng-click="landing.timePlayer.stopWork()">Stop</button>
-  
+      </div>
+    </div>
+  </div>
+
+  <div class="pomodoro">
+    <div class="tomato">{{ landing.timePlayer.pomodoro | timecode }}</div>
+    <button type="button" class="timer-button" ng-hide="landing.timePlayer.relax" ng-disabled="landing.timePlayer.buttonClicked" ng-click="landing.timePlayer.work()">{{ landing.timerButton }}</button>
+
+    <button type="button" class="break-button" ng-show="landing.timePlayer.relax" ng-disabled="landing.timePlayer.buttonClicked" ng-click="landing.timePlayer.work()">{{ landing.breakButton }}</button>
+
+    <button type="button" class="reset-button" ng-click="landing.timePlayer.resetWork()">Reset</button>
+
+    <button type="button" class="stop-button" ng-click="landing.timePlayer.stopWork()">Stop</button>
+  </div>
+</div>
