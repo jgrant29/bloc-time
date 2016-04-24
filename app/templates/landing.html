@@ -2,7 +2,7 @@
   <div class="todo">
     <div class="tasks">
       <div ng-controller="LandingCtrl">
-        <h2>Task History</h2>
+        <h1>Task History<hr></h1>
         <p>
           Sort by:
           <select ng-model="orderBy">
@@ -20,7 +20,7 @@
 
         <ul class="tasks">
           <!-- arrays are fully sortable and filterable -->
-          <li ng-repeat="task in tasks | orderBy:orderBy | filter:searchText">
+          <li ng-repeat="task in tasks | orderBy: '-timestamp' | orderBy:orderBy | filter:searchText">
             {{ task.from }}: {{ task.content }}
 
             <!-- delete a task using $remove -->
